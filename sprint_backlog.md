@@ -35,7 +35,7 @@
 5. Implémenter page d'accueil et cycle d'inscription simple.
 
 ## Notes
-- Branch strategy: travailler sur `etl_aziz_test` pour les développements.
+- Branch strategy: travailler sur `main` pour les développements.
 - Sécurité: garder secrets hors du repo; utiliser variables d'environnement.
 - Livraison: chaque PR doit inclure capture d'écran et tests basiques.
 
