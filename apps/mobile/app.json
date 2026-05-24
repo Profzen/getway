@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "GETWAY Mobile",
+    "slug": "getway-mobile",
+    "scheme": "getway",
+    "platforms": ["ios", "android", "web"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GETWAY - Inscription Partenaire</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#e5e2e1",
+                      "surface-container-highest": "#353535",
+                      "secondary-fixed-dim": "#ddb7ff",
+                      "on-secondary-fixed": "#2c0051",
+                      "on-surface-variant": "#cfc2d5",
+                      "on-background": "#e5e2e1",
+                      "surface-bright": "#393939",
+                      "surface-tint": "#deb7ff",
+                      "on-secondary-container": "#d6a9ff",
+                      "primary-fixed": "#f0dbff",
+                      "on-primary-fixed-variant": "#6712aa",
+                      "on-primary": "#4a007f",
+                      "surface": "#131313",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary": "#3c2f00",
+                      "secondary-container": "#6f00be",
+                      "on-tertiary-container": "#4e3d00",
+                      "inverse-surface": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "tertiary-container": "#cba72f",
+                      "inverse-on-surface": "#303030",
+                      "tertiary-fixed": "#ffe088",
+                      "primary-fixed-dim": "#deb7ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed-variant": "#6900b3",
+                      "secondary-fixed": "#f0dbff",
+                      "on-secondary": "#490080",
+                      "background": "#131313",
+                      "tertiary": "#e9c349",
+                      "primary": "#deb7ff",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "secondary": "#ddb7ff",
+                      "outline": "#988d9e",
+                      "on-error": "#690005",
+                      "surface-variant": "#353535",
+                      "inverse-primary": "#8136c4",
+                      "surface-container": "#202020",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#131313",
+                      "surface-container-low": "#1b1b1c",
+                      "on-primary-container": "#e4c4ff",
+                      "primary-container": "#7b2fbe",
+                      "outline-variant": "#4c4353",
+                      "on-tertiary-fixed": "#241a00",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "surface-container-high": "#2a2a2a",
+                      "on-primary-fixed": "#2c0050"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "xs": "4px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "xl": "80px",
+                      "md": "24px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "lg": "48px"
+              },
+              "fontFamily": {
+                      "headline-xl-mobile": ["Sora"],
+                      "body-md": ["Geist"],
+                      "display-lg-mobile": ["Sora"],
+                      "body-lg": ["Geist"],
+                      "label-sm": ["Geist"],
+                      "display-lg": ["Sora"],
+                      "headline-xl": ["Sora"],
+                      "headline-md": ["Sora"]
+              },
+              "fontSize": {
+                      "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Kinetic Obsidian Custom Effects */
+        .glass-panel {
+            background: rgba(27, 27, 28, 0.4); /* surface-container-low approx */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(204, 204, 204, 0.15);
+        }
+        .glow-active {
+            filter: drop-shadow(0 0 12px rgba(123, 47, 190, 0.4));
+        }
+        .input-glow:focus-within {
+            box-shadow: 0 0 15px rgba(123, 47, 190, 0.2);
+            border-color: #A855F7;
+        }
+        .bg-gradient-obsidian {
+            background: radial-gradient(circle at top right, rgba(123, 47, 190, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(233, 195, 73, 0.05) 0%, transparent 50%),
+                        #131313;
+        }
+        
+        /* Note: Suppressing TopNav and BottomNav per explicit instruction for Linear/Transactional/Onboarding flows */
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container bg-gradient-obsidian">
+<!-- Minimal Header for Onboarding (No standard navigation) -->
+<header class="w-full fixed top-0 z-50 py-md px-margin-mobile md:px-margin-desktop flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">hexagon</span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tighter">GETWAY</span>
+</div>
+<a class="flex items-center gap-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm uppercase" href="#">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+            Retour
+        </a>
+</header>
+<!-- Main Layout: Split Screen -->
+<main class="w-full min-h-screen flex flex-col lg:flex-row pt-24 lg:pt-0">
+<!-- Left Side: Value Proposition & Context (Fixed on Desktop) -->
+<section class="w-full lg:w-5/12 lg:fixed lg:h-screen lg:left-0 lg:top-0 lg:pt-32 px-margin-mobile lg:px-margin-desktop pb-md lg:pb-xl flex flex-col justify-center relative overflow-hidden">
+<!-- Atmospheric background element -->
+<div class="absolute inset-0 z-[-1] opacity-30 mix-blend-screen" data-alt="A striking abstract digital art piece serving as a background. It features smooth, flowing geometric waves in deep obsidian blacks. The composition is illuminated by intense, glowing accents of vibrant purple and prestigious gold. The lighting creates a high-end, technological luxury aesthetic, perfectly suited for a premium command center interface." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIvXVP9DtZmV5MVy5WSnb-iY6th7h-QlrueAb68dz42Ct4eDgJMeZbwziyJXikKPtUZxq3HvRMK_gVL4MrjTHdPs6DdLNQIzua239w7_uEkN_qHLtF_KVpNKsJXI_8MerrAWjDZ0sbiVtTf3IpW1KSY0OW1v-n_8k4XnA-grjqmTutPJZ3Y-I8qZhp1scgM8uhhYuBlQI5nYKQ_evd5blZz3K6rWP0XEM3-iGarerotL487Zk7BVrEfeSLgweuvokCFRY44uQXOMQ'); background-size: cover; background-position: center;">
+</div>
+<div class="space-y-lg relative z-10">
+<div>
+<span class="inline-flex items-center gap-xs font-label-sm text-label-sm text-tertiary uppercase tracking-widest mb-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Écosystème Partenaire
+                    </span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile lg:font-display-lg lg:text-display-lg text-on-surface mb-md">
+                        Liberté absolue.<br/>
+<span class="text-on-surface-variant">Responsabilité totale.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Rejoignez l'élite. Opérez de manière indépendante tout en bénéficiant de l'infrastructure technologique la plus avancée du marché.
+                    </p>
+</div>
+<!-- Progressive Commission Explainer Bento -->
+<div class="glass-panel p-md rounded-xl space-y-sm">
+<div class="flex items-center gap-sm mb-sm">
+<span class="material-symbols-outlined text-tertiary">trending_up</span>
+<h2 class="font-headline-md text-headline-md text-on-surface text-xl">Commission Progressive</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        Notre système récompense l'excellence. Plus vous évoluez, plus votre part augmente.
+                    </p>
+<div class="space-y-xs">
+<div class="flex justify-between items-center p-sm bg-surface-container/50 rounded-lg border border-outline-variant/10">
+<span class="text-on-surface-variant">Niveau 1: Standard</span>
+<span class="text-on-surface font-semibold">70%</span>
+</div>
+<div class="flex justify-between items-center p-sm bg-surface-container/80 rounded-lg border border-outline-variant/20">
+<span class="text-on-surface-variant">Niveau 2: Pro</span>
+<span class="text-on-surface font-semibold">80%</span>
+</div>
+<div class="flex justify-between items-center p-sm bg-surface-container rounded-lg border border-tertiary/30 relative overflow-hidden glow-active">
+<div class="absolute inset-0 bg-tertiary/5"></div>
+<span class="text-tertiary font-semibold relative z-10 flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                Niveau 3: Élite
+                            </span>
+<span class="text-tertiary font-bold relative z-10">90%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Side: Registration Flow -->
+<section class="w-full lg:w-7/12 lg:ml-auto lg:min-h-screen px-margin-mobile lg:px-margin-desktop py-lg lg:py-32 flex flex-col justify-center">
+<div class="glass-panel rounded-xl p-md lg:p-lg max-w-2xl w-full mx-auto">
+<!-- Progress Header -->
+<div class="flex justify-between items-center mb-xl">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold font-label-sm text-label-sm">1</div>
+<span class="font-headline-md text-headline-md text-sm text-on-surface">Création de profil</span>
+</div>
+<div class="h-[1px] flex-grow bg-outline-variant/30 mx-sm"></div>
+<div class="flex items-center gap-sm opacity-50">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant border border-outline-variant/30 flex items-center justify-center font-bold font-label-sm text-label-sm">2</div>
+<span class="font-body-md text-body-md text-sm hidden sm:inline">Vérification</span>
+</div>
+</div>
+<form class="space-y-xl">
+<!-- Section: Profile -->
+<div class="space-y-md">
+<div class="space-y-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Vos Informations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Créez votre identité au sein de l'écosystème.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Prénom</label>
+<input class="w-full bg-surface-container-high border-outline-variant/20 rounded-lg p-sm text-on-surface input-glow transition-all duration-300 placeholder:text-outline outline-none" placeholder="Jean" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Nom</label>
+<input class="w-full bg-surface-container-high border-outline-variant/20 rounded-lg p-sm text-on-surface input-glow transition-all duration-300 placeholder:text-outline outline-none" placeholder="Dupont" type="text"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Email Professionnel</label>
+<input class="w-full bg-surface-container-high border-outline-variant/20 rounded-lg p-sm text-on-surface input-glow transition-all duration-300 placeholder:text-outline outline-none" placeholder="jean.dupont@entreprise.com" type="email"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Mot de passe</label>
+<div class="relative">
+<input class="w-full bg-surface-container-high border-outline-variant/20 rounded-lg p-sm text-on-surface input-glow transition-all duration-300 placeholder:text-outline outline-none pr-10" placeholder="••••••••" type="password"/>
+<button class="absolute right-sm top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="h-[1px] w-full bg-outline-variant/15"></div>
+<!-- Section: Skills -->
+<div class="space-y-md">
+<div class="space-y-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Sélection des compétences</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Définissez votre zone d'expertise pour personnaliser votre Dashboard.</p>
+</div>
+<div class="flex flex-wrap gap-xs">
+<!-- Skill Chips -->
+<button class="px-sm py-xs rounded-full border border-primary/30 bg-primary/10 text-primary font-label-sm text-label-sm hover:bg-primary/20 transition-colors flex items-center gap-xs" type="button">
+<span class="material-symbols-outlined text-sm">check</span>
+                                Stratégie Digitale
+                            </button>
+<button class="px-sm py-xs rounded-full border border-outline-variant/30 bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:border-primary/50 hover:text-on-surface transition-all" type="button">
+                                Développement Web
+                            </button>
+<button class="px-sm py-xs rounded-full border border-outline-variant/30 bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:border-primary/50 hover:text-on-surface transition-all" type="button">
+                                Design UI/UX
+                            </button>
+<button class="px-sm py-xs rounded-full border border-primary/30 bg-primary/10 text-primary font-label-sm text-label-sm hover:bg-primary/20 transition-colors flex items-center gap-xs" type="button">
+<span class="material-symbols-outlined text-sm">check</span>
+                                Marketing Croissance
+                            </button>
+<button class="px-sm py-xs rounded-full border border-outline-variant/30 bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:border-primary/50 hover:text-on-surface transition-all" type="button">
+                                Ingénierie Données
+                            </button>
+<button class="px-sm py-xs rounded-full border border-outline-variant/30 bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:border-primary/50 hover:text-on-surface transition-all" type="button">
+                                Finance Structurée
+                            </button>
+</div>
+</div>
+<!-- Action -->
+<div class="pt-sm">
+<button class="w-full bg-surface-lowest border border-tertiary text-tertiary hover:bg-tertiary hover:text-on-tertiary font-label-sm text-label-sm uppercase tracking-widest py-md rounded-lg transition-all duration-300 flex items-center justify-center gap-sm group" type="submit">
+                            Rejoindre l'Écosystème
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-sm">
+                            En rejoignant, vous acceptez nos <a class="text-primary hover:underline" href="#">Conditions de Service</a> et reconnaissez votre engagement envers la charte de Responsabilité.
+                        </p>
+</div>
+</form>
+</div>
+<!-- Minimal Footer for Onboarding Context -->
+<div class="mt-xl text-center font-label-sm text-label-sm text-on-surface-variant opacity-60">
+                © 2024 GETWAY Ecosystem. All rights reserved.
+            </div>
+</section>
+</main>
+</body></html>

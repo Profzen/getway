@@ -1,0 +1,16 @@
+{
+  "name": "getway",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @getway/web dev",
+    "dev:mobile": "pnpm --filter @getway/mobile start",
+    "dev:all": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
