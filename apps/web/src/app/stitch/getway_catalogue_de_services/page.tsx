@@ -1,4 +1,5 @@
 import React from 'react';
+import GlassPanel from '@/components/stitch/GlassPanel';
 
 export default function Page() {
   return (
@@ -74,7 +75,7 @@ export default function Page() {
             <div className="max-w-4xl mx-auto text-center relative z-10">
               <h1 className="font-display-lg-mobile md:font-display-lg text-on-surface mb-sm">Digital Services <span className="text-primary">Marketplace</span></h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg">Access elite professionals and pre-configured service packages designed for high-performance scaling.</p>
-              <div className="glass-panel rounded-xl p-xs flex flex-col md:flex-row gap-sm max-w-3xl mx-auto">
+              <GlassPanel className="p-xs flex flex-col md:flex-row gap-sm max-w-3xl mx-auto">
                 <div className="relative flex-1">
                   <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">search</span>
                   <input className="w-full bg-transparent border-none pl-12 pr-4 py-sm text-body-md text-on-surface focus:ring-0 placeholder:text-outline-variant h-full min-h-[48px]" placeholder="Search for Web Dev, Branding, Consulting..." type="text" />
@@ -87,7 +88,7 @@ export default function Page() {
                   <option className="bg-surface" value="pro">Professional Services</option>
                 </select>
                 <button className="bg-primary-container text-white px-lg py-sm rounded-lg font-label-sm text-label-sm hover:bg-inverse-primary transition-colors min-h-[48px]">Explore</button>
-              </div>
+              </GlassPanel>
             </div>
           </section>
 
@@ -103,7 +104,7 @@ export default function Page() {
 
           <section className="py-xl px-margin-mobile md:px-margin-desktop">
             <div className="grid-desktop">
-              <div className="col-span-4 md:col-span-8 xl:col-span-8 glass-panel rounded-xl overflow-hidden group hover:-translate-y-1 transition-transform duration-300 relative">
+              <GlassPanel className="col-span-4 md:col-span-8 xl:col-span-8 overflow-hidden group hover:-translate-y-1 transition-transform duration-300 relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
                 <img className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Featured" src="/stitch/getway_catalogue_de_services/6e00340e4505.png" alt="Featured service" />
                 <div className="absolute bottom-0 left-0 p-lg z-20 w-full flex flex-col md:flex-row md:items-end justify-between gap-md">
@@ -130,9 +131,9 @@ export default function Page() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </GlassPanel>
 
-              <div className="col-span-4 md:col-span-4 xl:col-span-4 glass-panel rounded-xl p-md flex flex-col glow-active transition-all duration-300">
+              <GlassPanel className="col-span-4 md:col-span-4 xl:col-span-4 p-md flex flex-col glow-active transition-all duration-300">
                 <div className="flex justify-between items-start mb-md">
                   <div className="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/10 text-primary">
                     <span className="material-symbols-outlined text-2xl">brush</span>
@@ -145,9 +146,9 @@ export default function Page() {
                   <div className="text-on-surface font-headline-md text-lg">$850</div>
                   <button className="bg-transparent border border-primary text-primary px-sm py-xs rounded-DEFAULT font-label-sm text-[10px] hover:bg-primary/10 transition-colors">Order Now</button>
                 </div>
-              </div>
+              </GlassPanel>
 
-              <div className="col-span-4 md:col-span-4 xl:col-span-4 glass-panel rounded-xl p-md flex flex-col hover:border-white/30 transition-all duration-300">
+              <GlassPanel className="col-span-4 md:col-span-4 xl:col-span-4 p-md flex flex-col hover:border-white/30 transition-all duration-300">
                 <div className="flex justify-between items-start mb-md">
                   <div className="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/10 text-secondary">
                     <span className="material-symbols-outlined text-2xl">description</span>
@@ -160,9 +161,9 @@ export default function Page() {
                   <div className="text-on-surface font-headline-md text-lg">$299</div>
                   <button className="bg-transparent border border-primary text-primary px-sm py-xs rounded-DEFAULT font-label-sm text-[10px] hover:bg-primary/10 transition-colors">Order Now</button>
                 </div>
-              </div>
+              </GlassPanel>
 
-              <div className="col-span-4 md:col-span-4 xl:col-span-4 glass-panel rounded-xl p-md flex flex-col hover:border-white/30 transition-all duration-300">
+              <GlassPanel className="col-span-4 md:col-span-4 xl:col-span-4 p-md flex flex-col hover:border-white/30 transition-all duration-300">
                 <div className="flex justify-between items-start mb-md">
                   <div className="w-12 h-12 rounded-lg bg-surface flex items-center justify-center border border-white/10 text-tertiary">
                     <span className="material-symbols-outlined text-2xl">support_agent</span>
@@ -175,7 +176,7 @@ export default function Page() {
                   <div className="text-on-surface font-headline-md text-lg">$150</div>
                   <button className="bg-transparent border border-primary text-primary px-sm py-xs rounded-DEFAULT font-label-sm text-[10px] hover:bg-primary/10 transition-colors">Order Now</button>
                 </div>
-              </div>
+              </GlassPanel>
 
               <div className="col-span-4 md:col-span-8 xl:col-span-4 rounded-xl p-[1px] bg-gradient-to-br from-primary-container via-surface to-surface-container-lowest">
                 <div className="bg-[#121212] h-full w-full rounded-xl p-md flex flex-col relative overflow-hidden">

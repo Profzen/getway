@@ -1,4 +1,5 @@
 import React from 'react';
+import GlassPanel from '@/components/stitch/GlassPanel';
 
 export default function Page() {
   return (
@@ -27,14 +28,14 @@ export default function Page() {
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-md">
-            <section className="md:col-span-8 glass-panel rounded-xl p-md">
+            <GlassPanel className="md:col-span-8 p-md">
               <h3 className="font-headline-md mb-sm">Progression &amp; Statut</h3>
               <div className="space-y-md">
                 <div className="border-l pl-6">Phase items...</div>
               </div>
-            </section>
+            </GlassPanel>
 
-            <section className="md:col-span-4 glass-panel rounded-xl p-md h-[400px]">
+            <GlassPanel className="md:col-span-4 p-md h-[400px]">
               <h3 className="font-headline-md mb-sm">Canal d'équipe</h3>
               <div className="mt-4 space-y-4">
                 <div className="flex gap-2">
@@ -46,17 +47,17 @@ export default function Page() {
                   <div className="bg-primary/20 rounded-lg p-2">Super, je regarde ça d'ici 1h.</div>
                 </div>
               </div>
-            </section>
+            </GlassPanel>
 
-            <section className="md:col-span-6 glass-panel rounded-xl p-md">
+            <GlassPanel className="md:col-span-6 p-md">
               <h3 className="font-headline-md mb-sm">Tâches Prioritaires</h3>
               <div className="space-y-2">Task list...</div>
-            </section>
+            </GlassPanel>
 
-            <section className="md:col-span-6 glass-panel rounded-xl p-md">
+            <GlassPanel className="md:col-span-6 p-md">
               <h3 className="font-headline-md mb-sm">Fichiers Récents</h3>
               <div className="grid grid-cols-2 gap-sm">Files...</div>
-            </section>
+            </GlassPanel>
           </div>
         </div>
       </main>

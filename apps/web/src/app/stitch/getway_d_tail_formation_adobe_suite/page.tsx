@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileCard from '@/components/stitch/ProfileCard';
 
 export default function Page() {
   return (
@@ -45,13 +46,7 @@ export default function Page() {
               </div>
               <button className="w-full bg-tertiary text-on-tertiary py-3 rounded-lg">Réserver ma place</button>
             </div>
-            <div className="bg-surface-container-lowest rounded-xl p-md text-center">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary mb-sm mx-auto">
-                <img className="w-full h-full object-cover" alt="Instructor" src="/stitch/getway_d_tail_formation_adobe_suite/e59ea2f1c99a.png" />
-              </div>
-              <h3 className="font-headline-md">Julien Moreau</h3>
-              <p className="font-body-md text-primary">Directeur Artistique &amp; Motion Designer</p>
-            </div>
+            <ProfileCard name="Julien Moreau" role="Directeur Artistique & Motion Designer" img="/stitch/getway_d_tail_formation_adobe_suite/e59ea2f1c99a.png" />
           </div>
         </section>
       </main>

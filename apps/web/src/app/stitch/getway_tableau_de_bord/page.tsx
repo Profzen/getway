@@ -1,4 +1,5 @@
 import React from 'react';
+import GlassPanel from '@/components/stitch/GlassPanel';
 
 export default function Page() {
   return (
@@ -91,7 +92,7 @@ export default function Page() {
         </header>
 
         <div className="grid grid-cols-12 gap-gutter">
-          <section className="col-span-8 glass-panel rounded-xl p-lg flex flex-col justify-between relative overflow-hidden group">
+          <GlassPanel className="col-span-8 p-lg flex flex-col justify-between relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[60px] translate-x-1/2 -translate-y-1/2" />
             <div className="flex justify-between items-start mb-xl relative z-10">
               <div>
@@ -120,8 +121,8 @@ export default function Page() {
                 <div className="flex flex-col items-center gap-sm"><div className="w-8 h-8 rounded-full bg-surface-container border-2 border-white/20 flex items-center justify-center"><span className="material-symbols-outlined text-[16px] text-white/20">lock</span></div><span className="font-label-sm text-label-sm text-on-surface-variant/50 uppercase">Partner Premium</span></div>
               </div>
             </div>
-          </section>
-          <section className="col-span-4 glass-panel rounded-xl p-lg flex flex-col justify-between">
+          </GlassPanel>
+          <GlassPanel className="col-span-4 p-lg flex flex-col justify-between">
             <div>
               <h3 className="font-label-sm text-label-sm text-on-surface-variant uppercase mb-sm flex items-center gap-xs"><span className="material-symbols-outlined text-[16px]">account_balance_wallet</span> 30-Day Yield</h3>
               <div className="font-headline-xl text-headline-xl text-on-surface mb-xs">$42,850.<span className="text-on-surface-variant text-headline-md">00</span></div>
@@ -135,9 +136,9 @@ export default function Page() {
               <div className="w-full bg-primary-container/20 hover:bg-primary-container/40 transition-colors rounded-t" style={{ height: '65%' }} />
               <div className="w-full bg-primary-container/60 rounded-t shadow-[0_0_10px_rgba(123,47,190,0.4)]" style={{ height: '90%' }} />
             </div>
-          </section>
+          </GlassPanel>
           <div className="col-span-12 grid grid-cols-3 gap-gutter mt-md">
-            <section className="col-span-2 glass-panel rounded-xl p-lg">
+            <GlassPanel className="col-span-2 p-lg">
               <div className="flex justify-between items-center mb-md">
                 <h3 className="font-headline-md text-headline-md text-on-surface">Active Deployments</h3>
                 <a className="text-primary font-label-sm text-label-sm uppercase hover:underline" href="#">View All</a>
@@ -168,14 +169,14 @@ export default function Page() {
                   <div className="w-8 h-8 rounded-full border border-primary bg-primary/20 flex items-center justify-center text-[12px]"><span className="material-symbols-outlined" style={{ fontSize: 16 }}>person</span></div>
                 </li>
               </ul>
-            </section>
+            </GlassPanel>
             <div className="col-span-1 flex flex-col gap-gutter">
-              <div className="glass-panel rounded-xl p-md border-l-2 border-l-tertiary bg-gradient-to-br from-tertiary/5 to-transparent relative overflow-hidden">
+              <GlassPanel className="p-md border-l-2 border-l-tertiary bg-gradient-to-br from-tertiary/5 to-transparent relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-sm opacity-20"><span className="material-symbols-outlined text-[64px]">radar</span></div>
                 <h4 className="font-label-sm text-label-sm text-tertiary uppercase mb-sm flex items-center gap-xs"><span className="material-symbols-outlined text-[14px]">bolt</span> New Opportunity</h4>
                 <p className="font-body-md text-on-surface mb-md line-clamp-2">A high-yield marketplace request aligns with your 'Pro' skill matrix.</p>
                 <button className="text-tertiary font-label-sm text-label-sm uppercase hover:text-white transition-colors flex items-center gap-xs">Review Details <span className="material-symbols-outlined text-[14px]">arrow_forward</span></button>
-              </div>
+              </GlassPanel>
               <div className="grid grid-cols-2 gap-sm flex-1">
                 <a className="glass-panel rounded-lg p-md flex flex-col items-center justify-center gap-sm hover:bg-white/5 hover:border-primary/50 transition-all text-center group" href="#">
                   <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-110 transition-transform"><span className="material-symbols-outlined text-primary text-[24px]">school</span></div>

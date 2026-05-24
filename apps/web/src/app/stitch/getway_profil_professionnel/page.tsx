@@ -1,4 +1,5 @@
 import React from 'react';
+import GlassPanel from '@/components/stitch/GlassPanel';
 
 export default function Page() {
   return (
@@ -75,7 +76,7 @@ export default function Page() {
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-tertiary-container/5 rounded-full blur-[100px] pointer-events-none" />
         <section className="w-full max-w-[1200px] mx-auto px-margin-mobile md:px-gutter pt-xl pb-lg relative z-10 flex-1">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div className="md:col-span-8 glass-panel rounded-xl p-lg relative overflow-hidden group">
+            <GlassPanel className="md:col-span-8 p-lg relative overflow-hidden group">
               <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[50px] group-hover:bg-primary/30 transition-all duration-700" />
               <div className="relative z-10 flex flex-col md:flex-row gap-lg items-start md:items-center">
@@ -105,15 +106,15 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </div>
+            </GlassPanel>
             <div className="md:col-span-4 flex flex-col gap-gutter">
-              <div className="glass-panel rounded-xl p-md flex-1 flex flex-col justify-center items-center relative overflow-hidden group glow-hover transition-all duration-300">
+              <GlassPanel className="p-md flex-1 flex flex-col justify-center items-center relative overflow-hidden group glow-hover transition-all duration-300">
                 <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-50" />
                 <h3 className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">Project Success</h3>
                 <div className="font-display-lg text-display-lg-mobile md:text-display-lg text-gradient">99.8%</div>
                 <p className="font-body-md text-body-md text-tertiary mt-2 flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">trending_up</span> Top 1% Network</p>
-              </div>
-              <div className="glass-panel rounded-xl p-md flex-1 flex flex-col justify-center relative glow-hover transition-all duration-300">
+              </GlassPanel>
+              <GlassPanel className="p-md flex-1 flex flex-col justify-center relative glow-hover transition-all duration-300">
                 <h3 className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Current Status</h3>
                 <div className="flex items-center gap-3">
                   <span className="relative flex h-4 w-4">
@@ -125,9 +126,9 @@ export default function Page() {
                 <div className="mt-4 pt-4 border-t border-white/5">
                   <p className="font-label-sm text-label-sm text-on-surface-variant uppercase">Response Time: <span className="text-primary">&lt; 2 Hours</span></p>
                 </div>
-              </div>
+              </GlassPanel>
             </div>
-            <div className="md:col-span-12 glass-panel rounded-xl p-lg mt-md">
+            <GlassPanel className="md:col-span-12 p-lg mt-md">
               <h3 className="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2"><span className="material-symbols-outlined text-primary">terminal</span> Tech Cortex</h3>
               <div className="flex flex-wrap gap-sm">
                 <div className="bg-primary-container/10 border border-primary/20 text-primary font-label-sm text-label-sm uppercase px-4 py-2 rounded-full">React / Next.js</div>
@@ -139,7 +140,7 @@ export default function Page() {
                 <div className="bg-surface-container border border-white/10 text-on-surface-variant font-label-sm text-label-sm uppercase px-4 py-2 rounded-full">GraphQL</div>
                 <div className="bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] font-label-sm text-label-sm uppercase px-4 py-2 rounded-full flex items-center gap-1"><span className="material-symbols-outlined text-[14px]">military_tech</span> Master Level</div>
               </div>
-            </div>
+            </GlassPanel>
           </div>
         </section>
         <footer className="w-full py-xl bg-surface-container-lowest border-t border-white/5 mt-auto flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-md z-20 relative">
