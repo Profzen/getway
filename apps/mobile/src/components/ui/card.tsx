@@ -1,3 +1,4 @@
+import React from 'react'
 import { View, Text, StyleSheet, ViewProps } from 'react-native'
 import { colors, radii, spacing, shadows } from '@getway/theme'
 
@@ -48,3 +49,5 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
 })
+
+Card.displayName = 'Card'

@@ -1,12 +1,17 @@
-import { Pressable, Text, StyleSheet, ViewStyle, TextStyle, PressableProps } from 'react-native'
+import React, { ReactNode } from 'react'
+import { Pressable, Text, StyleSheet, ViewStyle, TextStyle, PressableProps, ActivityIndicator } from 'react-native'
 import { colors, radii, spacing } from '@getway/theme'
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost'
 
 type ButtonProps = PressableProps & {
-  label: string
+  label?: string
+  children?: ReactNode
   variant?: ButtonVariant
   fullWidth?: boolean
+  loading?: boolean
+  icon?: ReactNode
+  accessibilityLabel?: string
 }
 
 const variantStyles: Record<ButtonVariant, ViewStyle> = {
@@ -35,10 +40,12 @@ const textStyles: Record<ButtonVariant, TextStyle> = {
   },
 }
 
-export function Button({ label, variant = 'primary', fullWidth = false, style, ...props }: ButtonProps) {
+export function Button({ label, children, variant = 'primary', fullWidth = false, loading = false, icon, accessibilityLabel, style, ...props }: ButtonProps) {
   return (
     <Pressable
       accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel ?? label}
+      disabled={loading || props.disabled}
       style={({ pressed }) => [
         styles.button,
         fullWidth && styles.fullWidth,
@@ -48,7 +55,14 @@ export function Button({ label, variant = 'primary', fullWidth = false, style, .
       ]}
       {...props}
     >
-      <Text style={[styles.label, textStyles[variant]]}>{label}</Text>
+      {loading ? (
+        <ActivityIndicator color={textStyles[variant].color as string} />
+      ) : (
+        <>
+          {icon ? <>{icon}</> : null}
+          <Text style={[styles.label, textStyles[variant]]}>{label ?? children}</Text>
+        </>
+      )}
     </Pressable>
   )
 }

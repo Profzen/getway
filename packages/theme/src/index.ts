@@ -1,32 +1,76 @@
 export const colors = {
-  primary: {
-    50: '#eef2ff',
-    100: '#e0e7ff',
-    500: '#6366f1'
-  },
-  neutral: {
-    50: '#f9fafb',
-    500: '#6b7280'
-  }
+  brand: '#7EE0C6',
+  background: '#0B1220',
+  surface: '#111B2D',
+  surfaceElevated: '#16233A',
+  text: '#F8FAFC',
+  mutedText: '#CBD5E1',
+  border: 'rgba(255,255,255,0.08)',
+  borderStrong: 'rgba(255,255,255,0.14)',
+  danger: '#F87171',
+  warning: '#FBBF24',
+  success: '#22C55E',
+}
+
+export const radii = {
+  xs: 8,
+  sm: 12,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  full: 999,
 }
 
 export const spacing = {
-  px: '1px',
-  1: '0.25rem',
-  2: '0.5rem',
-  3: '0.75rem',
-  4: '1rem'
+  xxs: 4,
+  xs: 8,
+  sm: 12,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 40,
+}
+
+export const typography = {
+  display: 36,
+  title: 28,
+  subtitle: 20,
+  body: 16,
+  caption: 12,
+}
+
+export const shadows = {
+  soft: {
+    shadowColor: '#000000',
+    shadowOpacity: 0.2,
+    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 4,
+  },
 }
 
 export const tailwind = {
   theme: {
     extend: {
-      colors: {
-        primary: colors.primary,
-        neutral: colors.neutral
-      }
-    }
-  }
+      colors,
+      borderRadius: {
+        xs: `${radii.xs}px`,
+        sm: `${radii.sm}px`,
+        md: `${radii.md}px`,
+        lg: `${radii.lg}px`,
+        xl: `${radii.xl}px`,
+        full: `${radii.full}px`,
+      },
+    },
+  },
 }
 
-export default { colors, spacing, tailwind }
+export const tokens = {
+  colors,
+  radii,
+  spacing,
+  typography,
+  shadows,
+}
+
+export default tokens

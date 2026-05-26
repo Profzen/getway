@@ -9,6 +9,13 @@ Ce fichier est la mémoire vivante du projet GETWAY. Il doit conserver les déci
 - À utiliser comme base de reprise si le contexte doit être reconstruit rapidement.
 - À garder factuel, structuré et exploitable.
 
+## Directives de collaboration
+- Dire clairement quand une hypothèse utilisateur semble fausse, incomplète ou sous-optimale.
+- Argumenter les désaccords avec des faits, des contraintes techniques ou des compromis concrets.
+- Privilégier une discussion professionnelle et directe plutôt qu'une validation automatique.
+- Garder cette mémoire comme source de reprise autonome pour une nouvelle conversation.
+- Mettre à jour ce fichier au fur et à mesure des décisions, des corrections de méthode et de l'évolution de l'architecture.
+
 ## État initial du projet
 - Projet : GETWAY.
 - Nature : startup collaborative numérique.
@@ -29,6 +36,8 @@ GETWAY vise à créer une plateforme où des apprenants, partenaires et talents 
 - Architecture évolutive et sécurisée.
 - Documentation vivante obligatoire pour réduire la perte de contexte.
 - Structure projet attendue : une base web et une base mobile distinctes.
+- Tout ce qui doit être consommé par le mobile doit être exposé via HTTP(S) et ne pas dépendre d'un état serveur privé inaccessible au client mobile.
+- Le mobile ne consomme pas le dossier source du web : il consomme des endpoints publics.
 
 ## Décisions d'architecture
 Décision : démarrer avec une approche pragmatique centrée sur un socle simple, lisible et extensible, en gardant la sécurité comme contrainte de base.
@@ -36,6 +45,14 @@ Décision : démarrer avec une approche pragmatique centrée sur un socle simple
 Motif : le projet doit avancer vite sans compromettre la qualité ni la future montée en charge.
 
 Impact : le périmètre initial doit favoriser la clarté, la maintenabilité et la vérifiabilité.
+
+Statut : validée.
+
+Décision : considérer les fonctionnalités appelables par le mobile comme des surfaces HTTP publiques, pas comme des liens directs au code du front web.
+
+Motif : le mobile doit pouvoir fonctionner indépendamment du dépôt web et de l'organisation interne des dossiers.
+
+Impact : toute fonctionnalité destinée au mobile doit être exposée par une API consommable à distance.
 
 Statut : validée.
 
@@ -76,8 +93,9 @@ Statut : résolu.
 - Cahier des charges lu et synthétisé.
 - Plan de sprint initial créé.
 - Mémoire de projet initialisée.
-- Architecture technique finale non encore figée.
-- Développement produit non encore démarré.
+- Architecture technique en cours de stabilisation autour d'un web Next.js, d'un mobile Expo SDK 54 et de packages partagés.
+- Le workspace ne montre pas encore de backend API dédié dans `apps/web` ; à ce stade, il faut exposer les fonctionnalités appelables via des routes HTTP si elles doivent être consommées par le mobile.
+- Développement produit démarré côté socle web/mobile et base de design partagée.
 
 ## Contraintes à conserver
 - La sécurité reste transversale et prioritaire.
@@ -86,6 +104,8 @@ Statut : résolu.
 - La mémoire projet doit être maintenue à chaque évolution importante.
 - Le light mode est la base visuelle du produit.
 - Le dark mode reste la variante premium.
+- Le mobile doit toujours pouvoir appeler les fonctions métier via des API stables et documentées.
+- Les changements d'architecture doivent être discutés avec des arguments si une solution plus robuste existe.
 
 ## Format de mise à jour recommandé
 Chaque nouvelle entrée devrait suivre ce modèle :
@@ -108,6 +128,16 @@ Décision ou changement : création des documents sprint.md et memoire.md.
 Motif : structurer immédiatement l'exécution et conserver un historique fiable.
 
 Impact : base de pilotage disponible pour la suite du projet.
+
+Statut : validé.
+
+Contexte : clarification du périmètre appelable par le mobile.
+
+Décision ou changement : établir que le mobile consomme uniquement des endpoints HTTP(S) publics, même si le front web et le backend cohabitent dans le même projet Next.js.
+
+Motif : garantir que l'application mobile reste indépendante de l'organisation interne du code web.
+
+Impact : la conception doit privilégier des routes API stables et réutilisables.
 
 Statut : validé.
 

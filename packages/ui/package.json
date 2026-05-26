@@ -7,18 +7,19 @@
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "prepare": "pnpm build"
+    "build": "tsc -p tsconfig.build.json"
   },
-  "devDependencies": {
-    "typescript": "~5.8.3",
-    "@types/react": "~19.0.10",
+  "dependencies": {
     "@radix-ui/react-slot": "*",
     "class-variance-authority": "*",
-    "lucide-react": "*",
     "clsx": "*",
-    "tailwind-merge": "*",
+    "lucide-react": "*",
     "next-themes": "*",
+    "tailwind-merge": "*",
+    "typescript": "~5.8.3",
+    "@types/react": "~19.0.10"
+  },
+  "devDependencies": {
     "next": "*"
   },
   "peerDependencies": {
