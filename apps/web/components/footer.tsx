@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Link from 'next/link'
 import { Mail, Linkedin, Twitter, Github } from 'lucide-react'
@@ -100,36 +100,18 @@ export function Footer() {
 
         {/* Bottom Footer */}
         <div className="border-t border-border/40 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-foreground/60 text-sm">
-            &copy; 2024 GETWAY. All rights reserved.
-          </p>
+          <p className="text-foreground/60 text-sm">&copy; 2024 GETWAY. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a
-              href="https://twitter.com"
-              className="text-foreground/60 hover:text-primary transition-colors"
-              aria-label="Twitter"
-            >
+            <a href="https://twitter.com" className="text-foreground/60 hover:text-primary transition-colors" aria-label="Twitter">
               <Twitter className="w-5 h-5" />
             </a>
-            <a
-              href="https://linkedin.com"
-              className="text-foreground/60 hover:text-primary transition-colors"
-              aria-label="LinkedIn"
-            >
+            <a href="https://linkedin.com" className="text-foreground/60 hover:text-primary transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a
-              href="https://github.com"
-              className="text-foreground/60 hover:text-primary transition-colors"
-              aria-label="GitHub"
-            >
+            <a href="https://github.com" className="text-foreground/60 hover:text-primary transition-colors" aria-label="GitHub">
               <Github className="w-5 h-5" />
             </a>
-            <a
-              href="mailto:hello@getway.com"
-              className="text-foreground/60 hover:text-primary transition-colors"
-              aria-label="Email"
-            >
+            <a href="mailto:hello@getway.com" className="text-foreground/60 hover:text-primary transition-colors" aria-label="Email">
               <Mail className="w-5 h-5" />
             </a>
           </div>
@@ -138,3 +120,5 @@ export function Footer() {
     </footer>
   )
 }
+
+export default Footer

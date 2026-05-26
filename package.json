@@ -1,0 +1,12 @@
+{
+  "name": "getway",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.3.0",
+  "scripts": {
+    "dev:web": "pnpm --dir apps/web dev",
+    "dev:mobile": "pnpm --dir apps/mobile start",
+    "install:web": "pnpm --dir apps/web install",
+    "install:mobile": "pnpm --dir apps/mobile install"
+  }
+}

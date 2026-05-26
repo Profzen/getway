@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "GETWAY Mobile",
+    "slug": "getway-mobile",
+    "scheme": "getway",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
