@@ -9,42 +9,42 @@ export function AtypicalFeatures() {
       title: 'Global Network',
       description: 'Connect with thousands of talented professionals worldwide',
       span: 'col-span-1 row-span-2',
-      gradient: 'from-purple-500/20 to-blue-500/20'
+      gradient: 'from-emerald-500/15 to-teal-500/15'
     },
     {
       icon: Zap,
       title: 'AI Matching',
       description: 'Smart algorithm finds perfect opportunities',
       span: 'col-span-1',
-      gradient: 'from-pink-500/20 to-red-500/20'
+      gradient: 'from-cyan-500/15 to-emerald-500/15'
     },
     {
       icon: Award,
       title: 'Verified Skills',
       description: 'Showcase expertise with confidence',
       span: 'col-span-1',
-      gradient: 'from-yellow-500/20 to-orange-500/20'
+      gradient: 'from-lime-500/15 to-emerald-500/15'
     },
     {
       icon: Globe,
       title: 'Work Anywhere',
       description: 'Fully responsive on all devices',
       span: 'col-span-2',
-      gradient: 'from-cyan-500/20 to-blue-500/20'
+      gradient: 'from-teal-500/15 to-cyan-500/15'
     },
     {
       icon: TrendingUp,
       title: 'Growth Tools',
       description: 'Accelerate your professional journey',
       span: 'col-span-1',
-      gradient: 'from-green-500/20 to-emerald-500/20'
+      gradient: 'from-emerald-500/15 to-teal-500/15'
     },
     {
       icon: Sparkles,
       title: 'Premium Experience',
       description: 'Sleek, modern, and intuitive design',
       span: 'col-span-1',
-      gradient: 'from-violet-500/20 to-purple-500/20'
+      gradient: 'from-teal-500/15 to-emerald-500/15'
     }
   ]
 

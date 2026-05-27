@@ -4,41 +4,41 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* GETWAY Premium Light Theme - Violet Dominant */
-  --background: linear-gradient(135deg, #F5F0FF 0%, #F0E8FF 50%, #FAF5FF 100%);
-  --background-solid: oklch(0.97 0.04 270);
-  --foreground: oklch(0.32 0.08 270); /* Deep violet */
+  /* GETWAY Premium Light Theme - Green/Teal Dominant */
+  --background: linear-gradient(135deg, #F4FBF8 0%, #ECF8F4 50%, #F7FCFA 100%);
+  --background-solid: oklch(0.98 0.02 170);
+  --foreground: oklch(0.22 0.05 170); /* Deep teal */
   --card: oklch(1 0 0); /* Pure white */
-  --card-foreground: oklch(0.32 0.08 270);
+  --card-foreground: oklch(0.22 0.05 170);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.32 0.08 270);
-  --primary: oklch(0.50 0.20 270); /* Violet #7B2FBE */
+  --popover-foreground: oklch(0.22 0.05 170);
+  --primary: oklch(0.55 0.13 170); /* Teal #0C8F7B */
   --primary-foreground: oklch(0.95 0.01 0);
-  --secondary: oklch(0.63 0.14 270); /* Light violet #A855F7 */
+  --secondary: oklch(0.62 0.12 190); /* Green-blue accent */
   --secondary-foreground: oklch(0.95 0.01 0);
-  --muted: oklch(0.85 0.05 270);
-  --muted-foreground: oklch(0.55 0.08 270);
-  --accent: oklch(0.50 0.20 270);
+  --muted: oklch(0.90 0.03 170);
+  --muted-foreground: oklch(0.42 0.04 170);
+  --accent: oklch(0.55 0.13 170);
   --accent-foreground: oklch(0.95 0.01 0);
   --destructive: oklch(0.60 0.20 15);
   --destructive-foreground: oklch(0.95 0.01 0);
-  --border: oklch(0.88 0.06 270);
-  --input: oklch(0.96 0.04 270);
-  --ring: oklch(0.50 0.20 270);
-  --chart-1: oklch(0.50 0.20 270);
-  --chart-2: oklch(0.63 0.14 270);
-  --chart-3: oklch(0.45 0.18 45);
+  --border: oklch(0.86 0.04 170);
+  --input: oklch(0.97 0.02 170);
+  --ring: oklch(0.55 0.13 170);
+  --chart-1: oklch(0.55 0.13 170);
+  --chart-2: oklch(0.62 0.12 190);
+  --chart-3: oklch(0.60 0.14 45);
   --chart-4: oklch(0.55 0.19 200);
   --chart-5: oklch(0.60 0.15 30);
   --radius: 0.625rem;
-  --sidebar: oklch(0.97 0.04 270);
-  --sidebar-foreground: oklch(0.32 0.08 270);
-  --sidebar-primary: oklch(0.50 0.20 270);
+  --sidebar: oklch(0.98 0.02 170);
+  --sidebar-foreground: oklch(0.22 0.05 170);
+  --sidebar-primary: oklch(0.55 0.13 170);
   --sidebar-primary-foreground: oklch(0.95 0.01 0);
-  --sidebar-accent: oklch(0.63 0.14 270);
+  --sidebar-accent: oklch(0.62 0.12 190);
   --sidebar-accent-foreground: oklch(0.95 0.01 0);
-  --sidebar-border: oklch(0.88 0.06 270);
-  --sidebar-ring: oklch(0.50 0.20 270);
+  --sidebar-border: oklch(0.86 0.04 170);
+  --sidebar-ring: oklch(0.55 0.13 170);
 }
 
 html {
@@ -47,38 +47,38 @@ html {
 
 .dark {
   /* GETWAY Premium Dark Theme */
-  --background: oklch(0.08 0 0); /* Deep black #0D0D0D */
+  --background: oklch(0.08 0.01 170); /* Deep teal black */
   --foreground: oklch(0.95 0.01 0); /* Pure white #CCCCCC */
   --card: oklch(0.12 0 0); /* Charcoal gray #1E1E1E */
   --card-foreground: oklch(0.95 0.01 0);
   --popover: oklch(0.12 0 0);
   --popover-foreground: oklch(0.95 0.01 0);
-  --primary: oklch(0.50 0.20 270); /* Violet #7B2FBE */
+  --primary: oklch(0.55 0.13 170); /* Teal #0C8F7B */
   --primary-foreground: oklch(0.95 0.01 0);
-  --secondary: oklch(0.63 0.14 270); /* Light violet #A855F7 */
+  --secondary: oklch(0.62 0.12 190); /* Green-blue accent */
   --secondary-foreground: oklch(0.95 0.01 0);
   --muted: oklch(0.25 0 0);
   --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.50 0.20 270); /* Violet accent */
+  --accent: oklch(0.55 0.13 170); /* Teal accent */
   --accent-foreground: oklch(0.95 0.01 0);
   --destructive: oklch(0.60 0.20 15);
   --destructive-foreground: oklch(0.95 0.01 0);
   --border: oklch(0.20 0 0); /* Dark border */
   --input: oklch(0.15 0 0);
-  --ring: oklch(0.50 0.20 270);
-  --chart-1: oklch(0.50 0.20 270);
-  --chart-2: oklch(0.63 0.14 270);
+  --ring: oklch(0.55 0.13 170);
+  --chart-1: oklch(0.55 0.13 170);
+  --chart-2: oklch(0.62 0.12 190);
   --chart-3: oklch(0.45 0.18 45);
   --chart-4: oklch(0.55 0.19 200);
   --chart-5: oklch(0.60 0.15 30);
   --sidebar: oklch(0.10 0 0);
   --sidebar-foreground: oklch(0.95 0.01 0);
-  --sidebar-primary: oklch(0.50 0.20 270);
+  --sidebar-primary: oklch(0.55 0.13 170);
   --sidebar-primary-foreground: oklch(0.95 0.01 0);
-  --sidebar-accent: oklch(0.63 0.14 270);
+  --sidebar-accent: oklch(0.62 0.12 190);
   --sidebar-accent-foreground: oklch(0.95 0.01 0);
   --sidebar-border: oklch(0.18 0 0);
-  --sidebar-ring: oklch(0.50 0.20 270);
+  --sidebar-ring: oklch(0.55 0.13 170);
 }
 
 @theme inline {
@@ -131,7 +131,7 @@ html {
     color: var(--foreground);
   }
   body.with-gradient {
-    background: linear-gradient(135deg, #F5F0FF 0%, #F0E8FF 50%, #FAF5FF 100%);
+    background: linear-gradient(135deg, #F4FBF8 0%, #ECF8F4 50%, #F7FCFA 100%);
     background-attachment: fixed;
   }
 }

@@ -6,18 +6,18 @@ import { Button } from '@/components/ui/button'
 
 export function AtypicalHero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/8 via-background to-secondary/8">
       {/* Animated gradient shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-b from-primary/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-gradient-to-t from-secondary/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-t from-primary/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-b from-primary/28 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-gradient-to-t from-secondary/22 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-t from-primary/12 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="space-y-8">
           {/* Badge */}
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/25 backdrop-blur-sm">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
             <span className="text-sm font-semibold text-primary">The Future of Professional Connections</span>
           </div>
@@ -48,7 +48,7 @@ export function AtypicalHero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary/40 hover:border-primary hover:bg-primary/5 text-foreground font-semibold"
+              className="border-2 border-primary/35 hover:border-primary hover:bg-primary/5 text-foreground font-semibold"
               asChild
             >
               <Link href="#features">Explore Features</Link>
@@ -63,7 +63,7 @@ export function AtypicalHero() {
               { number: '95%', label: 'Success' }
             ].map((stat, index) => (
               <div key={index} className="group">
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent group-hover:from-secondary group-hover:to-primary transition-all">
+                  <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent group-hover:from-secondary group-hover:to-primary transition-all">
                   {stat.number}
                 </div>
                 <p className="text-sm text-foreground/60 mt-2">{stat.label}</p>
