@@ -1,7 +1,7 @@
-export const colors = {
+export const darkColors = {
   brand: '#7EE0C6',
-  background: '#0B1220',
-  surface: '#111B2D',
+  background: '#07111F',
+  surface: '#101B2C',
   surfaceElevated: '#16233A',
   text: '#F8FAFC',
   mutedText: '#CBD5E1',
@@ -11,6 +11,22 @@ export const colors = {
   warning: '#FBBF24',
   success: '#22C55E',
 }
+
+export const lightColors = {
+  brand: '#0C8F7B',
+  background: '#F5F8FB',
+  surface: '#FFFFFF',
+  surfaceElevated: '#EDF3F8',
+  text: '#0F172A',
+  mutedText: '#475569',
+  border: 'rgba(15, 23, 42, 0.10)',
+  borderStrong: 'rgba(15, 23, 42, 0.16)',
+  danger: '#DC2626',
+  warning: '#D97706',
+  success: '#15803D',
+}
+
+export const colors = darkColors
 
 export const radii = {
   xs: 8,
@@ -52,7 +68,7 @@ export const shadows = {
 export const tailwind = {
   theme: {
     extend: {
-      colors,
+      colors: darkColors,
       borderRadius: {
         xs: `${radii.xs}px`,
         sm: `${radii.sm}px`,
@@ -66,11 +82,23 @@ export const tailwind = {
 }
 
 export const tokens = {
-  colors,
+  colors: darkColors,
   radii,
   spacing,
   typography,
   shadows,
+}
+
+export const themePalettes = {
+  dark: darkColors,
+  light: lightColors,
+}
+
+export type ThemeMode = keyof typeof themePalettes
+export type ThemeColors = typeof darkColors
+
+export function getThemeColors(mode: ThemeMode) {
+  return themePalettes[mode]
 }
 
 export default tokens

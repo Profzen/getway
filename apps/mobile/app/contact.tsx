@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { ScrollView, StyleSheet, Text } from 'react-native'
-import { Screen, Input, Button, Card } from '../src/components/ui'
+import { Screen, Input, Button, Card, useTheme } from '../src/components/ui'
 import { API_BASE } from '../src/config'
-import { colors, spacing } from '@getway/theme'
+import { spacing } from '@getway/theme'
 
 export default function ContactScreen() {
   const [name, setName] = useState('')
@@ -10,6 +10,7 @@ export default function ContactScreen() {
   const [message, setMessage] = useState('')
   const [result, setResult] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const { colors } = useTheme()
 
   async function submit() {
     setLoading(true)
@@ -36,7 +37,7 @@ export default function ContactScreen() {
           <Input placeholder="Email" value={email} onChangeText={setEmail} keyboardType="email-address" />
           <Input placeholder="Message" value={message} onChangeText={setMessage} multiline style={styles.message} />
           <Button label={loading ? 'Envoi…' : 'Envoyer'} onPress={submit} loading={loading} fullWidth />
-          {result ? <Text style={styles.feedback}>{result}</Text> : null}
+          {result ? <Text style={[styles.feedback, { color: colors.brand }]}>{result}</Text> : null}
         </Card>
       </ScrollView>
     </Screen>
@@ -47,5 +48,5 @@ const styles = StyleSheet.create({
   screen: { paddingHorizontal: 0, paddingTop: 0 },
   content: { padding: spacing.lg, gap: spacing.lg },
   message: { minHeight: 120, textAlignVertical: 'top' },
-  feedback: { color: colors.brand, fontSize: 14, fontWeight: '700' },
+  feedback: { fontSize: 14, fontWeight: '700' },
 })

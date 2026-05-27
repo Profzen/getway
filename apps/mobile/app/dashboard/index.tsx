@@ -1,7 +1,8 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Screen, Card, Button } from '../../src/components/ui'
 import { Link } from 'expo-router'
-import { colors, spacing } from '@getway/theme'
+import { spacing } from '@getway/theme'
+import { useTheme } from '../../src/components/ui'
 
 const sections = [
   { href: '/dashboard/profile', title: 'Profil' },
@@ -12,11 +13,13 @@ const sections = [
 ]
 
 export default function DashboardIndex() {
+  const { colors } = useTheme()
+
   return (
     <Screen style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
         <Card title="Dashboard" subtitle="Espace de pilotage natif">
-          <Text style={styles.body}>
+          <Text style={[styles.body, { color: colors.mutedText }]}>
             Accès rapide aux sections utilisateur, aux alertes et aux opportunités.
           </Text>
         </Card>
@@ -24,7 +27,7 @@ export default function DashboardIndex() {
         <Card title="Raccourcis">
           <View style={styles.grid}>
             {sections.map((section) => (
-              <Link key={section.href} href={section.href} asChild>
+              <Link key={section.href} href={section.href as any} asChild>
                 <Button label={section.title} variant="secondary" fullWidth />
               </Link>
             ))}
@@ -38,6 +41,6 @@ export default function DashboardIndex() {
 const styles = StyleSheet.create({
   screen: { paddingHorizontal: 0, paddingTop: 0 },
   content: { padding: spacing.lg, gap: spacing.lg },
-  body: { color: colors.mutedText, fontSize: 14, lineHeight: 22 },
+  body: { fontSize: 14, lineHeight: 22 },
   grid: { gap: spacing.md },
 })

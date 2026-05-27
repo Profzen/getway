@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Screen, Card } from '../src/components/ui'
+import { Screen, Card, useTheme } from '../src/components/ui'
 import { fetchJson } from '../src/lib/api'
-import { colors, radii, spacing } from '@getway/theme'
+import { radii, spacing } from '@getway/theme'
 
 type AboutPayload = {
   mission: string
@@ -11,6 +11,7 @@ type AboutPayload = {
 
 export default function AboutScreen() {
   const [data, setData] = useState<AboutPayload | null>(null)
+  const { colors } = useTheme()
 
   useEffect(() => {
     fetchJson<AboutPayload>('/api/about').then(setData).catch(() => setData(null))
@@ -20,7 +21,7 @@ export default function AboutScreen() {
     <Screen style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
         <Card title="À propos de GetWay" subtitle="Version mobile native">
-          <Text style={styles.body}>
+          <Text style={[styles.body, { color: colors.text }]}>
             {data?.mission ?? 'Build a collaborative digital platform for learning, work, and autonomy.'}
           </Text>
         </Card>
@@ -29,8 +30,8 @@ export default function AboutScreen() {
           <View style={styles.list}>
             {(data?.highlights ?? []).map((item) => (
               <View key={item} style={styles.highlightItem}>
-                <Text style={styles.dot}>•</Text>
-                <Text style={styles.highlightText}>{item}</Text>
+                <Text style={[styles.dot, { color: colors.brand }]}>•</Text>
+                <Text style={[styles.highlightText, { color: colors.mutedText }]}>{item}</Text>
               </View>
             ))}
           </View>
@@ -43,9 +44,9 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   screen: { paddingHorizontal: 0, paddingTop: 0 },
   content: { padding: spacing.lg, gap: spacing.lg },
-  body: { color: colors.text, fontSize: 15, lineHeight: 23 },
+  body: { fontSize: 15, lineHeight: 23 },
   list: { gap: 10 },
   highlightItem: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
-  dot: { color: colors.brand, fontSize: 16, lineHeight: 22, fontWeight: '800' },
-  highlightText: { color: colors.mutedText, fontSize: 14, lineHeight: 22, flex: 1 },
+  dot: { fontSize: 16, lineHeight: 22, fontWeight: '800' },
+  highlightText: { fontSize: 14, lineHeight: 22, flex: 1 },
 })

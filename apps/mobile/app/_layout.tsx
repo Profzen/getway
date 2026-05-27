@@ -1,15 +1,23 @@
 import { Stack } from 'expo-router'
-import ThemeProvider from '../src/components/ui/theme-provider'
+import ThemeProvider, { useThemeContext } from '../src/components/ui/theme-provider'
+
+function AppStack() {
+  const { colors } = useThemeContext()
+
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: colors.background },
+      }}
+    />
+  )
+}
 
 export default function RootLayout() {
   return (
     <ThemeProvider initialMode="dark">
-      <Stack
-        screenOptions={{
-          headerShown: false,
-          contentStyle: { backgroundColor: '#0B1220' },
-        }}
-      />
+      <AppStack />
     </ThemeProvider>
   )
 }

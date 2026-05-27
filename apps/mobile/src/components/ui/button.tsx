@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Pressable, Text, StyleSheet, ViewStyle, TextStyle, PressableProps, ActivityIndicator } from 'react-native'
-import { colors, radii, spacing } from '@getway/theme'
+import { radii, spacing } from '@getway/theme'
+import { useTheme } from './use-theme'
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost'
 
@@ -14,45 +15,28 @@ type ButtonProps = PressableProps & {
   accessibilityLabel?: string
 }
 
-const variantStyles: Record<ButtonVariant, ViewStyle> = {
-  primary: {
-    backgroundColor: colors.brand,
-  },
-  secondary: {
-    backgroundColor: colors.surfaceElevated,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  ghost: {
-    backgroundColor: 'transparent',
-  },
-}
-
-const textStyles: Record<ButtonVariant, TextStyle> = {
-  primary: {
-    color: '#06101A',
-  },
-  secondary: {
-    color: colors.text,
-  },
-  ghost: {
-    color: colors.text,
-  },
-}
-
 export function Button({ label, children, variant = 'primary', fullWidth = false, loading = false, icon, accessibilityLabel, style, ...props }: ButtonProps) {
+  const { colors } = useTheme()
+  const variantStyles: Record<ButtonVariant, ViewStyle> = {
+    primary: { backgroundColor: colors.brand },
+    secondary: { backgroundColor: colors.surfaceElevated, borderWidth: 1, borderColor: colors.border },
+    ghost: { backgroundColor: 'transparent' },
+  }
+
+  const textStyles: Record<ButtonVariant, TextStyle> = {
+    primary: { color: '#06101A' },
+    secondary: { color: colors.text },
+    ghost: { color: colors.text },
+  }
+
   return (
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel ?? label}
       disabled={loading || props.disabled}
-      style={({ pressed }) => [
-        styles.button,
-        fullWidth && styles.fullWidth,
-        variantStyles[variant],
-        pressed && styles.pressed,
-        style,
-      ]}
+      style={({ pressed }) =>
+        [styles.button, fullWidth && styles.fullWidth, variantStyles[variant], pressed && styles.pressed, style] as any
+      }
       {...props}
     >
       {loading ? (

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, Text } from 'react-native'
-import { Screen, Card } from '../../src/components/ui'
+import { Screen, Card, useTheme } from '../../src/components/ui'
 import { fetchJson } from '../../src/lib/api'
-import { colors, spacing } from '@getway/theme'
+import { spacing } from '@getway/theme'
 
 export default function Opportunities() {
   const [items, setItems] = useState<any[]>([])
+  const { colors } = useTheme()
 
   useEffect(() => {
     fetchJson<{ items: any[] }>('/api/dashboard/opportunities').then((d) => setItems(d.items || [])).catch(() => setItems([]))
@@ -18,7 +19,7 @@ export default function Opportunities() {
           {items.map((it) => (
             <Card key={it.id} title={it.title} />
           ))}
-          {!items.length ? <Text style={styles.empty}>Aucune opportunité pour le moment.</Text> : null}
+          {!items.length ? <Text style={[styles.empty, { color: colors.mutedText }]}>Aucune opportunité pour le moment.</Text> : null}
         </Card>
       </ScrollView>
     </Screen>
@@ -28,5 +29,5 @@ export default function Opportunities() {
 const styles = StyleSheet.create({
   screen: { paddingHorizontal: 0, paddingTop: 0 },
   content: { padding: spacing.lg, gap: spacing.lg },
-  empty: { color: colors.mutedText, fontSize: 14 },
+  empty: { fontSize: 14 },
 })

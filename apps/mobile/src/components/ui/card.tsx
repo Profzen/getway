@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, ViewProps } from 'react-native'
-import { colors, radii, spacing, shadows } from '@getway/theme'
+import { radii, spacing, shadows } from '@getway/theme'
+import { useTheme } from './use-theme'
 
 type CardProps = ViewProps & {
   title?: string
@@ -8,12 +9,24 @@ type CardProps = ViewProps & {
 }
 
 export function Card({ title, subtitle, children, style, ...props }: CardProps) {
+  const { colors } = useTheme()
+
   return (
-    <View style={[styles.card, style]} {...props}>
+    <View
+      style={[
+        styles.card,
+        {
+          backgroundColor: colors.surface,
+          borderColor: colors.border,
+        },
+        style,
+      ]}
+      {...props}
+    >
       {(title || subtitle) && (
         <View style={styles.header}>
-          {title ? <Text style={styles.title}>{title}</Text> : null}
-          {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}
+          {title ? <Text style={[styles.title, { color: colors.text }]}>{title}</Text> : null}
+          {subtitle ? <Text style={[styles.subtitle, { color: colors.mutedText }]}>{subtitle}</Text> : null}
         </View>
       )}
       <View style={styles.content}>{children}</View>
@@ -23,9 +36,7 @@ export function Card({ title, subtitle, children, style, ...props }: CardProps) 
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'rgba(255,255,255,0.04)',
     borderWidth: 1,
-    borderColor: colors.border,
     borderRadius: radii.lg,
     ...shadows.soft,
   },
@@ -35,12 +46,10 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   title: {
-    color: colors.text,
     fontSize: 18,
     fontWeight: '800',
   },
   subtitle: {
-    color: colors.mutedText,
     fontSize: 13,
     lineHeight: 20,
   },

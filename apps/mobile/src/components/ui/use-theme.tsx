@@ -5,7 +5,9 @@ export function useTheme() {
   return {
     mode: ctx.mode,
     tokens: ctx.tokens,
+    colors: ctx.colors,
     toggle: ctx.toggle,
+    setMode: ctx.setMode,
   }
 }
 

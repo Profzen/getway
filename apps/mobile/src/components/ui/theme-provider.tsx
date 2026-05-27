@@ -1,23 +1,26 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react'
 import { StatusBar } from 'react-native'
-import tokens from '@getway/theme'
-
-type ThemeMode = 'dark' | 'light'
+import tokens, { getThemeColors, type ThemeColors, type ThemeMode } from '@getway/theme'
 
 type ThemeContextValue = {
   mode: ThemeMode
   tokens: typeof tokens
+  colors: ThemeColors
   toggle: () => void
+  setMode: (mode: ThemeMode) => void
 }
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 
 export function ThemeProvider({ children, initialMode = 'dark' }: { children: ReactNode; initialMode?: ThemeMode }) {
   const [mode, setMode] = useState<ThemeMode>(initialMode)
+  const colors = getThemeColors(mode)
 
   const value: ThemeContextValue = {
     mode,
     tokens,
+    colors,
+    setMode,
     toggle: () => setMode((m) => (m === 'dark' ? 'light' : 'dark')),
   }
 

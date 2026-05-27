@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { ScrollView, StyleSheet, Text } from 'react-native'
-import { Screen, Input, Button, Card } from '../src/components/ui'
+import { Screen, Input, Button, Card, useTheme } from '../src/components/ui'
 import { API_BASE } from '../src/config'
-import { colors, spacing } from '@getway/theme'
+import { spacing } from '@getway/theme'
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('')
   const [token, setToken] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const { colors } = useTheme()
 
   async function submit() {
     setLoading(true)
@@ -30,7 +31,7 @@ export default function LoginScreen() {
         <Card title="Connexion" subtitle="Authentification native">
           <Input placeholder="username" value={username} onChangeText={setUsername} />
           <Button label={loading ? 'Connexion…' : 'Se connecter'} onPress={submit} loading={loading} fullWidth />
-          {token ? <Text style={styles.token}>Token: {token}</Text> : null}
+          {token ? <Text style={[styles.token, { color: colors.brand }]}>Token: {token}</Text> : null}
         </Card>
       </ScrollView>
     </Screen>
@@ -40,5 +41,5 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   screen: { paddingHorizontal: 0, paddingTop: 0 },
   content: { padding: spacing.lg, gap: spacing.lg },
-  token: { color: colors.brand, fontSize: 13, lineHeight: 20, fontWeight: '700' },
+  token: { fontSize: 13, lineHeight: 20, fontWeight: '700' },
 })
