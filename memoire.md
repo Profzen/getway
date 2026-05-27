@@ -15,6 +15,7 @@ Ce fichier est la mémoire vivante du projet GETWAY. Il doit conserver les déci
 - Privilégier une discussion professionnelle et directe plutôt qu'une validation automatique.
 - Garder cette mémoire comme source de reprise autonome pour une nouvelle conversation.
 - Mettre à jour ce fichier au fur et à mesure des décisions, des corrections de méthode et de l'évolution de l'architecture.
+- Pour ce projet, travailler directement sur `main` car le dépôt est géré en solo.
 
 ## État initial du projet
 - Projet : GETWAY.
@@ -106,6 +107,7 @@ Statut : résolu.
 - Le dark mode reste la variante premium.
 - Le mobile doit toujours pouvoir appeler les fonctions métier via des API stables et documentées.
 - Les changements d'architecture doivent être discutés avec des arguments si une solution plus robuste existe.
+- La branche de travail de référence pour ce projet est `main`.
 
 ## Format de mise à jour recommandé
 Chaque nouvelle entrée devrait suivre ce modèle :
